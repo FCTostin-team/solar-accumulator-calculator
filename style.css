@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "FactorioFont";
+    src: url("https://fonts.cdnfonts.com/s/19687/PressStart2P-Regular.woff") format("woff");
+}
+
+:root {
+    --factorio-dark: #1a1a1a;
+    --factorio-dark-alt: #242424;
+    --factorio-primary: #f29f05;
+    --factorio-secondary: #a8a8a8;
+    --factorio-accent: #0a0a0a;
+    --factorio-border: #444;
+    --factorio-text: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "FactorioFont", monospace;
+    background-color: var(--factorio-dark);
+    color: var(--factorio-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--factorio-primary);
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    color: var(--factorio-primary);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.calculator-panel {
+    background-color: var(--factorio-dark-alt);
+    border: 2px solid var(--factorio-border);
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--factorio-primary);
+    font-size: 12px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--factorio-accent);
+    border: 1px solid var(--factorio-border);
+    color: var(--factorio-text);
+    font-family: "FactorioFont", monospace;
+    font-size: 14px;
+    outline: none;
+    text-align: right;
+}
+
+.input-field:focus {
+    border-color: var(--factorio-primary);
+}
+
+.result-box {
+    background-color: var(--factorio-accent);
+    border: 1px solid var(--factorio-border);
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.result-label {
+    font-size: 10px;
+    color: var(--factorio-secondary);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.result-value {
+    font-size: 24px;
+    color: var(--factorio-primary);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    background-color: var(--factorio-accent);
+    border: 1px solid var(--factorio-border);
+    padding: 10px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 8px;
+    color: var(--factorio-secondary);
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 10px;
+    color: #fff;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top: 2px solid var(--factorio-primary);
+    padding-top: 20px;
+    font-size: 10px;
+    color: #888888;
+}
+
+.footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: var(--factorio-primary);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-links p {
+    margin: 0;
+}
