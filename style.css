@@ -76,7 +76,7 @@ body {
     font-family: "FactorioFont", monospace;
     font-size: 14px;
     outline: none;
-    text-align: right;
+    text-align: center;
 }
 
 .input-field:focus {
@@ -156,4 +156,13 @@ body {
 
 .footer-links p {
     margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }

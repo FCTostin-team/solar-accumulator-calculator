@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorio Solar Calculator</title>
+    <title>Factorio: Калькулятор солнечных панелей</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://wiki.factorio.com/images/thumb/Solar_panel.png/32px-Solar_panel.png" type="image/png">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>SOLAR ARRAY<br>CALCULATOR</h1>
+            <h1>КАЛЬКУЛЯТОР<br>СОЛНЕЧНЫХ ПАНЕЛЕЙ</h1>
         </div>
 
         <div class="calculator-panel">
             <div class="input-group">
-                <label for="solarInput">NUMBER OF SOLAR PANELS</label>
-                <input type="number" id="solarInput" class="input-field" placeholder="0" min="0">
+                <label for="solarInput">КОЛИЧЕСТВО СОЛНЕЧНЫХ ПАНЕЛЕЙ</label>
+                <input type="number" id="solarInput" class="input-field" placeholder="0 " min="0">
             </div>
 
             <div class="result-box">
-                <div class="result-label">Required Accumulators</div>
+                <div class="result-label">Необходимо аккумуляторов</div>
                 <div id="resultValue" class="result-value">0</div>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-label">Max Power Output</div>
-                    <div id="powerGen" class="stat-value">0.00 MW</div>
+                    <div class="stat-label">Макс. выработка энергии</div>
+                    <div id="powerGen" class="stat-value">0.00 МВт</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Total Storage</div>
-                    <div id="storageCap" class="stat-value">0 MJ</div>
+                    <div class="stat-label">Общая емкость сети</div>
+                    <div id="storageCap" class="stat-value">0 МДж</div>
                 </div>
             </div>
         </div>
@@ -45,8 +45,8 @@
                 <p><a href="https://boosty.to/ostinfct" target="_blank">Boosty</a></p>
             </div>
             <div class="footer-links">
-                <p>Optimal ratio: 0.84</p>
-                <p>Created with support of FCTostin</p>
+                <p>Оптимальное соотношение: 0.84</p>
+                <p>Создано при поддержке <a href="https://t.me/FCTostin" target="_blank">FCTostin</a></p>
             </div>
         </div>
     </div>
