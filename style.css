@@ -41,7 +41,9 @@ body {
     z-index: 10;
 }
 
-.lang-toggle {
+.lang-select {
+    appearance: none;
+    width: 180px;
     border: 1px solid var(--factorio-border);
     background-color: var(--factorio-dark-alt);
     color: var(--factorio-primary);
@@ -49,35 +51,11 @@ body {
     font-size: 11px;
     padding: 8px 10px;
     cursor: pointer;
+    text-align: left;
 }
 
-.lang-toggle:hover,
-.lang-toggle:focus-visible {
-    border-color: var(--factorio-primary);
-    outline: none;
-}
-
-.lang-menu {
-    margin-top: 8px;
-    padding: 8px;
-    border: 1px solid var(--factorio-border);
-    background-color: var(--factorio-dark-alt);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-}
-
-.lang-dropdown {
-    appearance: none;
-    min-width: 160px;
-    border: 1px solid var(--factorio-border);
-    background-color: var(--factorio-accent);
-    color: var(--factorio-text);
-    font-family: "FactorioFont", monospace;
-    font-size: 10px;
-    padding: 8px;
-    cursor: pointer;
-}
-
-.lang-dropdown:focus {
+.lang-select:hover,
+.lang-select:focus-visible {
     border-color: var(--factorio-primary);
     outline: none;
 }

@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ratioText = document.getElementById('ratioText');
     const supportText = document.getElementById('supportText');
 
-    const langSwitcher = document.getElementById('langSwitcher');
-    const langToggle = document.getElementById('langToggle');
-    const langMenu = document.getElementById('langMenu');
     const langSelect = document.getElementById('lang-select');
 
     const RATIO = 0.84;
@@ -85,28 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         powerGen.textContent = `${totalPower.toFixed(2)} ${units.mw}`;
         storageCap.textContent = `${totalStorage.toLocaleString(locale)} ${units.mj}`;
     }
-
-    function toggleLanguageMenu() {
-        const isOpen = !langMenu.hasAttribute('hidden');
-
-        if (isOpen) {
-            langMenu.setAttribute('hidden', '');
-            langToggle.setAttribute('aria-expanded', 'false');
-            return;
-        }
-
-        langMenu.removeAttribute('hidden');
-        langToggle.setAttribute('aria-expanded', 'true');
-    }
-
-    langToggle.addEventListener('click', toggleLanguageMenu);
-
-    document.addEventListener('click', (event) => {
-        if (!langSwitcher.contains(event.target) && !langMenu.hasAttribute('hidden')) {
-            langMenu.setAttribute('hidden', '');
-            langToggle.setAttribute('aria-expanded', 'false');
-        }
-    });
 
     langSelect.addEventListener('change', (event) => {
         applyLanguage(event.target.value);
