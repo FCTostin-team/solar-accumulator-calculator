@@ -12,25 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ratioText = document.getElementById('ratioText');
     const supportText = document.getElementById('supportText');
 
-    const langSwitcher = document.getElementById('langSwitcher');
-    const langToggle = document.getElementById('langToggle');
-    const langMenu = document.getElementById('langMenu');
-    const langOptions = Array.from(document.querySelectorAll('.lang-option'));
-
-    const languageNames = {
-        ru: 'Русский',
-        en: 'English',
-        uk: 'Українська',
-        kk: 'Қазақша',
-        cs: 'Čeština',
-        nl: 'Nederlands',
-        sv: 'Svenska',
-        de: 'Deutsch',
-        pl: 'Polski',
-        fr: 'Français',
-        zh: '中文',
-        ja: '日本語'
-    };
+    const langSelect = document.getElementById('lang-select');
 
     const RATIO = 0.84;
     const SOLAR_POWER = 60;
@@ -104,37 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         storageCap.textContent = `${totalStorage.toLocaleString(locale)} ${units.mj}`;
     }
 
-    function toggleLanguageMenu() {
-        const isOpen = !langMenu.hasAttribute('hidden');
-
-        if (isOpen) {
-            langMenu.setAttribute('hidden', '');
-            langToggle.setAttribute('aria-expanded', 'false');
-            return;
-        }
-
-        langMenu.removeAttribute('hidden');
-        langToggle.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeLanguageMenu() {
-        langMenu.setAttribute('hidden', '');
-        langToggle.setAttribute('aria-expanded', 'false');
-    }
-
-    langToggle.addEventListener('click', toggleLanguageMenu);
-
-    document.addEventListener('click', (event) => {
-        if (!langSwitcher.contains(event.target) && !langMenu.hasAttribute('hidden')) {
-            closeLanguageMenu();
-        }
-    });
-
-    langOptions.forEach((option) => {
-        option.addEventListener('click', () => {
-            applyLanguage(option.dataset.lang);
-            closeLanguageMenu();
-        });
+    langSelect.addEventListener('change', (event) => {
+        applyLanguage(event.target.value);
     });
 
     solarInput.addEventListener('input', calculate);

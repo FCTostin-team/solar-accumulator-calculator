@@ -9,21 +9,20 @@
 </head>
 <body>
     <div class="lang-switcher" id="langSwitcher">
-        <button id="langToggle" class="lang-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">Русский</button>
-        <div class="lang-menu" id="langMenu" role="menu" hidden>
-            <button type="button" class="lang-option" data-lang="ru" role="menuitem">Русский</button>
-            <button type="button" class="lang-option" data-lang="en" role="menuitem">English</button>
-            <button type="button" class="lang-option" data-lang="uk" role="menuitem">Українська</button>
-            <button type="button" class="lang-option" data-lang="kk" role="menuitem">Қазақша</button>
-            <button type="button" class="lang-option" data-lang="cs" role="menuitem">Čeština</button>
-            <button type="button" class="lang-option" data-lang="nl" role="menuitem">Nederlands</button>
-            <button type="button" class="lang-option" data-lang="sv" role="menuitem">Svenska</button>
-            <button type="button" class="lang-option" data-lang="de" role="menuitem">Deutsch</button>
-            <button type="button" class="lang-option" data-lang="pl" role="menuitem">Polski</button>
-            <button type="button" class="lang-option" data-lang="fr" role="menuitem">Français</button>
-            <button type="button" class="lang-option" data-lang="zh" role="menuitem">中文</button>
-            <button type="button" class="lang-option" data-lang="ja" role="menuitem">日本語</button>
-        </div>
+        <select id="lang-select" class="lang-select" aria-label="Выбор языка">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+            <option value="kk">Қазақша</option>
+            <option value="cs">Čeština</option>
+            <option value="nl">Nederlands</option>
+            <option value="sv">Svenska</option>
+            <option value="de">Deutsch</option>
+            <option value="pl">Polski</option>
+            <option value="fr">Français</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+        </select>
     </div>
 
     <div class="container">
