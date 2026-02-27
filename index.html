@@ -8,29 +8,49 @@
     <link rel="icon" href="https://wiki.factorio.com/images/thumb/Solar_panel.png/32px-Solar_panel.png" type="image/png">
 </head>
 <body>
+    <div class="lang-switcher" id="langSwitcher">
+        <button id="langToggle" class="lang-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">Язык</button>
+        <div class="lang-menu" id="langMenu" hidden>
+            <select id="lang-select" class="lang-dropdown" aria-label="Выбор языка">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+                <option value="uk">Українська</option>
+                <option value="kk">Қазақша</option>
+                <option value="cs">Čeština</option>
+                <option value="nl">Nederlands</option>
+                <option value="sv">Svenska</option>
+                <option value="de">Deutsch</option>
+                <option value="pl">Polski</option>
+                <option value="fr">Français</option>
+                <option value="zh">中文</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+    </div>
+
     <div class="container">
         <div class="header">
-            <h1>КАЛЬКУЛЯТОР<br>СОЛНЕЧНЫХ ПАНЕЛЕЙ</h1>
+            <h1 id="mainTitle">КАЛЬКУЛЯТОР<br>СОЛНЕЧНЫХ ПАНЕЛЕЙ</h1>
         </div>
 
         <div class="calculator-panel">
             <div class="input-group">
-                <label for="solarInput">КОЛИЧЕСТВО СОЛНЕЧНЫХ ПАНЕЛЕЙ</label>
-                <input type="number" id="solarInput" class="input-field" placeholder="0 " min="0">
+                <label for="solarInput" id="inputLabel">КОЛИЧЕСТВО СОЛНЕЧНЫХ ПАНЕЛЕЙ</label>
+                <input type="number" id="solarInput" class="input-field" placeholder="0" min="0">
             </div>
 
             <div class="result-box">
-                <div class="result-label">Необходимо аккумуляторов</div>
+                <div class="result-label" id="resultLabel">Необходимо аккумуляторов</div>
                 <div id="resultValue" class="result-value">0</div>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-label">Макс. выработка энергии</div>
+                    <div class="stat-label" id="powerLabel">Макс. выработка энергии</div>
                     <div id="powerGen" class="stat-value">0.00 МВт</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">Общая емкость сети</div>
+                    <div class="stat-label" id="storageLabel">Общая емкость сети</div>
                     <div id="storageCap" class="stat-value">0 МДж</div>
                 </div>
             </div>
@@ -45,12 +65,24 @@
                 <p><a href="https://boosty.to/ostinfct" target="_blank">Boosty</a></p>
             </div>
             <div class="footer-links">
-                <p>Оптимальное соотношение: 0.84</p>
-                <p>Создано при поддержке <a href="https://t.me/FCTostin" target="_blank">FCTostin</a></p>
+                <p id="ratioText">Оптимальное соотношение: 0.84</p>
+                <p><span id="supportText">Создано при поддержке </span><a href="https://t.me/FCTostin" target="_blank">FCTostin</a></p>
             </div>
         </div>
     </div>
 
+    <script src="profiles/ru.js"></script>
+    <script src="profiles/en.js"></script>
+    <script src="profiles/uk.js"></script>
+    <script src="profiles/kk.js"></script>
+    <script src="profiles/cs.js"></script>
+    <script src="profiles/nl.js"></script>
+    <script src="profiles/sv.js"></script>
+    <script src="profiles/de.js"></script>
+    <script src="profiles/pl.js"></script>
+    <script src="profiles/fr.js"></script>
+    <script src="profiles/zh.js"></script>
+    <script src="profiles/ja.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

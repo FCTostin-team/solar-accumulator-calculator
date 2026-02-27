@@ -34,6 +34,54 @@ body {
     padding: 20px;
 }
 
+.lang-switcher {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+
+.lang-toggle {
+    border: 1px solid var(--factorio-border);
+    background-color: var(--factorio-dark-alt);
+    color: var(--factorio-primary);
+    font-family: "FactorioFont", monospace;
+    font-size: 11px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+    border-color: var(--factorio-primary);
+    outline: none;
+}
+
+.lang-menu {
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid var(--factorio-border);
+    background-color: var(--factorio-dark-alt);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.lang-dropdown {
+    appearance: none;
+    min-width: 160px;
+    border: 1px solid var(--factorio-border);
+    background-color: var(--factorio-accent);
+    color: var(--factorio-text);
+    font-family: "FactorioFont", monospace;
+    font-size: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.lang-dropdown:focus {
+    border-color: var(--factorio-primary);
+    outline: none;
+}
+
 .header {
     text-align: center;
     margin-bottom: 30px;
@@ -43,7 +91,7 @@ body {
 
 .header h1 {
     color: var(--factorio-primary);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     font-size: 20px;
     margin: 0;
     line-height: 1.5;
@@ -53,7 +101,7 @@ body {
     background-color: var(--factorio-dark-alt);
     border: 2px solid var(--factorio-border);
     padding: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .input-group {
@@ -157,12 +205,13 @@ body {
 .footer-links p {
     margin: 0;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }
