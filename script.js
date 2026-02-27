@@ -15,7 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSwitcher = document.getElementById('langSwitcher');
     const langToggle = document.getElementById('langToggle');
     const langMenu = document.getElementById('langMenu');
-    const langSelect = document.getElementById('lang-select');
+    const langOptions = Array.from(document.querySelectorAll('.lang-option'));
+
+    const languageNames = {
+        ru: 'Русский',
+        en: 'English',
+        uk: 'Українська',
+        kk: 'Қазақша',
+        cs: 'Čeština',
+        nl: 'Nederlands',
+        sv: 'Svenska',
+        de: 'Deutsch',
+        pl: 'Polski',
+        fr: 'Français',
+        zh: '中文',
+        ja: '日本語'
+    };
 
     const RATIO = 0.84;
     const SOLAR_POWER = 60;
@@ -66,7 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ratioText.textContent = translation.ratioText;
         supportText.textContent = `${translation.supportText} `;
 
-        langSelect.value = lang;
+        langToggle.textContent = languageNames[lang] || languageNames.ru;
+        langOptions.forEach((option) => {
+            option.classList.toggle('is-active', option.dataset.lang === lang);
+        });
         localStorage.setItem('app-lang', lang);
         calculate();
     }
@@ -99,17 +117,24 @@ document.addEventListener('DOMContentLoaded', () => {
         langToggle.setAttribute('aria-expanded', 'true');
     }
 
+    function closeLanguageMenu() {
+        langMenu.setAttribute('hidden', '');
+        langToggle.setAttribute('aria-expanded', 'false');
+    }
+
     langToggle.addEventListener('click', toggleLanguageMenu);
 
     document.addEventListener('click', (event) => {
         if (!langSwitcher.contains(event.target) && !langMenu.hasAttribute('hidden')) {
-            langMenu.setAttribute('hidden', '');
-            langToggle.setAttribute('aria-expanded', 'false');
+            closeLanguageMenu();
         }
     });
 
-    langSelect.addEventListener('change', (event) => {
-        applyLanguage(event.target.value);
+    langOptions.forEach((option) => {
+        option.addEventListener('click', () => {
+            applyLanguage(option.dataset.lang);
+            closeLanguageMenu();
+        });
     });
 
     solarInput.addEventListener('input', calculate);
