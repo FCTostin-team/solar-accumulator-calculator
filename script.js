@@ -63,7 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ratioText.textContent = translation.ratioText;
         supportText.textContent = `${translation.supportText} `;
 
-        langSelect.value = lang;
+        langToggle.textContent = languageNames[lang] || languageNames.ru;
+        langOptions.forEach((option) => {
+            option.classList.toggle('is-active', option.dataset.lang === lang);
+        });
         localStorage.setItem('app-lang', lang);
         calculate();
     }
