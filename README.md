@@ -1,13 +1,14 @@
 # FCT Solar Accumulator Calculator <a href="https://github.com/OstinUA"><img align="right" src="https://img.shields.io/badge/OstinUA-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
 
-**Plan your Factorio solar fields like an engineer, not by vibes.**
+![Factorio: 2.0+](https://img.shields.io/badge/Factorio-2.0%2B%20%2F%20Space%20Age-orange?style=for-the-badge)
 
-[![Platform: Web](https://img.shields.io/badge/Platform-Web-0f172a?style=for-the-badge&logo=google-chrome&logoColor=white)](#)
-[![Stack: Vanilla JS](https://img.shields.io/badge/Stack-Vanilla%20JS-f7df1e?style=for-the-badge&logo=javascript&logoColor=111827)](#)
-[![Status: Active](https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge)](#)
-[![Version](https://img.shields.io/badge/Version-1.0.0-3b82f6?style=for-the-badge)](#)
-[![Coverage](https://img.shields.io/badge/Coverage-Manual%20Smoke%20Test-f59e0b?style=for-the-badge)](#testing)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge)](LICENSE)
+![Platform: Web](https://img.shields.io/badge/Platform-Web_App-0ea5e9?style=for-the-badge)
+[![Frontend: Vanilla JS](https://img.shields.io/badge/Frontend-Vanilla%20JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111111)](script.js)
+[![Styles: CSS3](https://img.shields.io/badge/Styles-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](style.css)
+[![Markup: HTML5](https://img.shields.io/badge/Markup-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](index.html)
+![Status: Active](https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge)
+![Coverage: Manual](https://img.shields.io/badge/Coverage-Manual%20Validation-lightgrey?style=for-the-badge)
+[![i18n](https://img.shields.io/badge/i18n-multi--language-2ea44f?style=for-the-badge)](#features)
 
 > [!IMPORTANT]
 > This project is a **client-side, zero-backend calculator** focused on Factorio solar and accumulator balancing. It is intentionally lightweight and can be shipped as static files.
@@ -209,3 +210,9 @@ Project created with the support of the FCTostin community.
 
 [![Patreon](https://img.shields.io/badge/Patreon-Support-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/c/OstinFCT)
 [![Boosty](https://img.shields.io/badge/Boosty-Donate-F15F2C?style=for-the-badge&logo=boosty&logoColor=white)](https://boosty.to/ostinfct)
+
+## Contacts
+
+- GitHub: [OstinUA](https://github.com/OstinUA)
+- Team page: [FCTostin-team](https://github.com/FCTostin-team)
+- Contribution process: see [`CONTRIBUTING.md`](CONTRIBUTING.md).
