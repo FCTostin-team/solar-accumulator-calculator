@@ -1,199 +1,42 @@
-# Contributing to FCT Solar Accumulator Calculator
+# <a href="https://github.com/OstinUA" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/OstinUA/Image-storage/main/Factorio/Gear-silhouette-of-the-Factorio-logo.png" width="32" valign="middle" alt="telegram:FCTostin"></a> Contributing Guide <a href="https://github.com/OstinUA"></a>
 
-Thanks for deciding to invest your time in this project. Contributions of all sizes are welcome, from typo fixes to feature-level refactors.
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-3e80ed?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FCTostin-team)
+[![Open Source](https://img.shields.io/badge/Open_Source-Yes-brightgreen?style=for-the-badge&logo=open-source&logoColor=white)](https://github.com/FCTostin-team)
+[![Views](https://img.shields.io/badge/Profile_Views-%31&#56;%33-blueviolet?style=for-the-badge)](https://github.com/OstinUA)
+[![OstinUA](https://capsule-render.vercel.app/api?type=rect&color=FFA500&height=2&)](https://github.com/OstinUA)
 
-## Introduction
 
-This repository is a lightweight static web tool for Factorio power planning. We keep the workflow intentionally clean and low-friction: minimal dependencies, deterministic logic, and pragmatic code reviews.
+Hello! Thank you for your interest in contributing to this project. I am always open to any help, whether it's fixing bugs, adding new features, improving documentation, or just sharing fresh ideas. 
 
-If you contribute, you help improve usability for thousands of players planning scalable solar layouts.
+This document is not a strict set of rules, but a simple guide on how we can comfortably and productively work together.
 
-## I Have a Question
+## ⬢ How You Can Help
 
-> [!IMPORTANT]
-> **GitHub Issues are reserved for bugs and feature requests, not general usage Q&A.**
+* **Found a bug?** Open an Issue and briefly describe what went wrong and how to reproduce it.
+* **Have a cool idea?** Create an Issue with your proposal. It's always best to discuss an idea first before spending time writing code.
+* **Improving documentation.** Fixing typos, expanding instructions, or translating — absolutely any help is valuable.
+* **Ready to write code?** Feel free to fork the repository and open a Pull Request.
 
-If your topic is a question (how to use, gameplay interpretation, setup advice), use community channels instead:
+## ⬢ Pull Request Process
 
-- GitHub Discussions (if enabled in the repo)
-- Telegram community chat: <https://t.me/FCTostin>
-- YouTube community channel: <https://www.youtube.com/@FCT-Ostin>
+The workflow here is as straightforward as possible:
 
-When asking, provide context (what you tried, expected outcome, screenshots if UI-related).
+1. Fork this repository.
+2. Create a new branch for your changes (`git checkout -b feature/my-awesome-idea` or `git checkout -b bugfix/issue-123`).
+3. Make your changes and commit them (`git commit -m "Add new awesome feature"`).
+4. Push the changes to your fork (`git push origin feature/my-awesome-idea`).
+5. Open a Pull Request to this repository.
 
-## Reporting Bugs
+## ⬢ A Few Simple Requests
 
-Before opening a bug report:
+* Try to stick to the code style already used in the project.
+* Make your commit messages clear so it's easy to understand what changed.
+* If your Pull Request resolves a specific Issue, mention its number in the description (e.g., `Closes #42`).
+* If the logic changes, please update the relevant section in the README.
 
-1. Check existing open/closed issues for duplicates.
-2. Reproduce on latest `main` branch.
-3. Verify whether the issue is browser-specific.
+## ⬢ Feedback
 
-### What to Include in a Bug Report
+I try to review all Issues and Pull Requests as quickly as possible. If I haven't replied in a while, don't hesitate to ping me in the comments.
 
-Please include the following payload:
-
-- **Environment**
-  - OS and version (e.g., Windows 11, Ubuntu 24.04)
-  - Browser and version (e.g., Chrome 125)
-  - Repository commit/branch used
-- **Steps to Reproduce**
-  - Exact, numbered sequence from app launch to failure
-- **Expected Behavior**
-  - What should have happened
-- **Actual Behavior**
-  - What actually happened
-- **Evidence**
-  - Console errors, screenshots, screen recordings
-
-A high-signal issue saves review cycles and gets fixed faster.
-
-## Suggesting Enhancements
-
-Feature proposals are welcome when they solve a real workflow pain.
-
-Your enhancement request should include:
-
-- **Problem Statement**: What friction or limitation exists right now?
-- **Proposed Solution**: What change do you suggest?
-- **Use Cases**: Concrete examples of who benefits and how.
-- **Scope**: Is this UI-only, logic-only, i18n-related, or structural?
-
-Keep proposals focused. Small, composable enhancements are easier to merge than huge multi-concern redesigns.
-
-## Local Development / Setup
-
-### 1) Fork and Clone
-
-```bash
-# Fork via GitHub UI, then clone your fork
-git clone https://github.com/<your-username>/solar-accumulator-calculator.git
-cd solar-accumulator-calculator
-```
-
-### 2) Add Upstream Remote
-
-```bash
-git remote add upstream https://github.com/OstinUA/solar-accumulator-calculator.git
-git fetch upstream
-```
-
-### 3) Run Locally
-
-This is a static app, so no dependency install is required.
-
-```bash
-# Option A: open directly
-open index.html   # macOS
-# or
-xdg-open index.html  # Linux
-# or
-start index.html  # Windows PowerShell
-
-# Option B: local HTTP server (recommended)
-python3 -m http.server 8000
-```
-
-Open `http://localhost:8000` and validate behavior in browser.
-
-### 4) Environment Variables
-
-There is no `.env` in the current architecture.
-If future features introduce backend or build tooling, add `.env.example` and document every variable.
-
-## Pull Request Process
-
-### Branch Naming
-
-Use descriptive branch names:
-
-- `feature/<short-feature-name>`
-- `bugfix/<issue-id-or-topic>`
-- `docs/<topic>`
-- `refactor/<scope>`
-
-Examples:
-
-- `feature/add-it-language-profile`
-- `bugfix/fix-locale-fallback`
-- `docs/rewrite-readme`
-
-### Commit Convention
-
-Use **Conventional Commits**:
-
-- `feat: add Japanese translation profile`
-- `fix: handle missing translation fallback`
-- `docs: improve setup and deployment sections`
-- `refactor: split language helpers`
-
-### Sync With Upstream
-
-Before opening a PR, rebase your branch on latest `main`:
-
-```bash
-git fetch upstream
-git rebase upstream/main
-```
-
-### PR Description Checklist
-
-Your PR should include:
-
-- What changed and why
-- Linked issue(s), if applicable
-- Testing notes (manual steps / screenshots)
-- UI screenshots for visible interface changes
-- Any backward-compatibility concerns
-
-## Styleguides
-
-Keep code style simple, readable, and aligned with existing files.
-
-- Use clear variable naming and avoid clever abstractions.
-- Preserve the no-framework, static-first architecture unless discussed in advance.
-- Keep translation keys consistent across all language profiles.
-- Avoid mixing unrelated refactors in one PR.
-
-Suggested optional local checks:
-
-```bash
-# JS/CSS formatting checks if you use local tooling
-npx prettier --check "**/*.{html,css,js}"
-```
-
-If you introduce linter/formatter tooling, document it in `README.md`.
-
-## Testing
-
-All behavior changes should be tested before PR submission.
-
-Minimum expectation:
-
-1. Manual smoke test for calculation correctness.
-2. Language switching verification.
-3. Persistence check for saved language preference.
-4. Browser console check for runtime errors.
-
-Example run flow:
-
-```bash
-python3 -m http.server 8000
-# then manually test in browser
-```
-
-If you add automated tests, include exact run commands in your PR.
-
-## Code Review Process
-
-- Maintainers review incoming PRs for correctness, scope, and maintainability.
-- At least **one maintainer approval** is required before merge.
-- Address review comments with follow-up commits or amendments.
-- Keep review threads resolved and changelog clear.
-
-Fastest merge path:
-
-- small focused PR
-- clean commit history
-- explicit test notes
-- clear rationale
+The main rule is mutual respect. Welcome, and thank you for your contribution!
+[![OstinUA](https://capsule-render.vercel.app/api?type=rect&color=FFA500&height=2&)](https://github.com/OstinUA)
